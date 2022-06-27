@@ -26,17 +26,7 @@
                    to: 40 300 100; 
                    dur: 5000; 
                    easing: linear; 
-                   loop: true" 
-        //changing individual properties with code and using setInterval
-        var rotationSpeed = 0.06;
-        var myOtherBox = document.getElementById('myOtherBox');
-
-         function spin(){
-         myOtherBox.object3D.rotation.x += rotationSpeed;
-         console.log(myOtherBox.object3D.rotation.x);
-         }
-
-setInterval(spin, 16); //equivalent to 60 fps>
+                   loop: true">
       </a-box>
       <a-box id="myOtherBox" 
         position="2 1 -3" 
@@ -45,7 +35,17 @@ setInterval(spin, 16); //equivalent to 60 fps>
         height="1" 
         depth="1" 
         material="src: #wood2"
-        shadow>  
+        shadow
+        //changing individual properties with code and using setInterval
+        var rotationSpeed = 0.06;
+        var myOtherBox = document.getElementById('myOtherBox');
+
+        function spin(){
+        myOtherBox.object3D.rotation.x += rotationSpeed;
+        console.log(myOtherBox.object3D.rotation.x);
+         }
+
+setInterval(spin, 16); //equivalent to 60 fps>  
       </a-box>
       <a-plane id="ground"
         position="0 0 -4" 
